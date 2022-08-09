@@ -1,2 +1,4 @@
 # CitiFront
-Submission for Citi HackOverflow
+Frontend for Application
+
+Group Members are:
