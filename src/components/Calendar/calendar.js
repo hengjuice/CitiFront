@@ -3,9 +3,10 @@ import ReactDOM from 'react-dom/client';
 import { ViewState, EditingState, IntegratedEditing } from '@devexpress/dx-react-scheduler';
 import { Scheduler, WeekView, Appointments, AppointmentForm } from '@devexpress/dx-react-scheduler-material-ui';
 import { Grid } from '@mui/material';
+import { useState } from 'react';
 const CalenderGrid = () => {
 
-    const [isloading, setLoading] = useState(false);
+    const [isLoading, setLoading] = useState(false);
 
 
     return (
@@ -19,10 +20,6 @@ const CalenderGrid = () => {
                 <Appointments />
                 <AppointmentForm />
             </Scheduler>
-            <Display 
-                clientInfo={clientInfo}
-                isLoading={isLoading}
-            />
         </Grid>
     );
 }
