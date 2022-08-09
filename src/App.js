@@ -8,10 +8,10 @@ function App() {
   return (
     <div className="App">
       <Grid container spacing={1}>
-        <Grid item xs={9}>
+        <Grid item xs={8}>
           <CalendarGrid/>
         </Grid>
-        <Grid item xs={3}>
+        <Grid item xs={4}>
           <Display/>
         </Grid>
       </Grid>

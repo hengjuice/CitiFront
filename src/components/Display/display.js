@@ -12,8 +12,6 @@ const Display = (props) => {
       <h1> Heng Jiu Xiao</h1>
       <h2> Total Assets: </h2>
     </div>
-
-    
   );
 }
 
