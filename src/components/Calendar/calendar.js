@@ -10,17 +10,19 @@ const CalenderGrid = () => {
 
 
     return (
-        <Grid item xs={8}>
+        <div className="calendar">
             <h1>Banker Page</h1>
             <Scheduler>
-                <ViewState/>
-                <EditingState/>
-                <IntegratedEditing/>
+                <ViewState />
+                <EditingState />
+                <IntegratedEditing />
                 <WeekView />
                 <Appointments />
                 <AppointmentForm />
             </Scheduler>
-        </Grid>
+        </div>
+            
+
     );
 }
 
