@@ -1,10 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import CalendarGrid from './components/Calendar/calendar';
 
 function App() {
   return (
     <div className="App">
-      <h1>App</h1>
+      <CalendarGrid/>
     </div>
   );
 }
