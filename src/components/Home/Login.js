@@ -32,7 +32,7 @@ function Copyright(props) {
         bankid: data.get('bankid'),
         password: data.get('password'),
       });
-      if (data.get('bankid') == 'banker'){
+      if (data.get('bankid') == 'malcolmpang' && data.get('password')== 'citibank'){
         // add route to banker page
         setUser('Banker');
         console.log('Banker Page');

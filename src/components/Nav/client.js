@@ -45,7 +45,7 @@ const ClientAppBar = () => {
             variant="h6"
             noWrap
             component="a"
-            href="/ClientAppointments"
+            href="/Book%20Appointments"
             sx={{
               mr: 2,
               display: { xs: 'none', md: 'flex' },
