@@ -4,7 +4,10 @@ import { Grid, Avatar, Button, CssBaseline,
     Link, Box,  Typography, Container} from '@mui/material';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
-import { useState } from "react"
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+
+
 function Copyright(props) {
     return (
       <Typography variant="body2" color="text.secondary" align="center" {...props}>
@@ -21,6 +24,7 @@ function Copyright(props) {
   const theme = createTheme();
   
   export default function SignIn() {
+    const navigate = useNavigate();
     const handleSubmit = (event) => {
       event.preventDefault();
       const data = new FormData(event.currentTarget);
@@ -32,11 +36,13 @@ function Copyright(props) {
         // add route to banker page
         setUser('Banker');
         console.log('Banker Page');
+        navigate('/BankerHome')
       }
       else{
         // add route to client page
         setUser('Client');
         console.log('Client Page');
+        navigate('/ClientHome')
       }
     };
   
