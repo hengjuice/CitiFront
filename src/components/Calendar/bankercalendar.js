@@ -18,7 +18,7 @@ const BankerCalender = (props) => {
            borderRadius: "8px",
          }} 
           onClick={()=>{
-            handleClick(data)
+            handleClick(data.title)
            }}
           >
          {children}
