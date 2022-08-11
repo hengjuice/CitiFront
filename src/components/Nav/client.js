@@ -14,8 +14,8 @@ import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import { Link } from "react-router-dom";
 
-const pages = ['Book Appointments', 'Page1', 'Page2'];
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+const pages = ['Book Appointments'];
+const settings = ['Profile', 'Logout'];
 
 const ClientAppBar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -45,7 +45,7 @@ const ClientAppBar = () => {
             variant="h6"
             noWrap
             component="a"
-            href="/ClientHome"
+            href="/ClientAppointments"
             sx={{
               mr: 2,
               display: { xs: 'none', md: 'flex' },

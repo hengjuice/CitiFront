@@ -36,13 +36,13 @@ function Copyright(props) {
         // add route to banker page
         setUser('Banker');
         console.log('Banker Page');
-        navigate('/BankerHome')
+        navigate('/Manage%20Appointments')
       }
       else{
         // add route to client page
         setUser('Client');
         console.log('Client Page');
-        navigate('/ClientHome')
+        navigate('/Book%20Appointments')
       }
     };
   

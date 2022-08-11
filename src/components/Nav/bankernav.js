@@ -14,8 +14,8 @@ import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import { Link } from "react-router-dom";
 
-const pages = ['Manage Appointments', 'Page1', 'Page2'];
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+const pages = ['Manage Appointments'];
+const settings = ['Profile', 'Logout'];
 
 const BankerAppBar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -45,7 +45,7 @@ const BankerAppBar = () => {
             variant="h6"
             noWrap
             component="a"
-            href="/BankerHome"
+            href="/Manage%20Appointments"
             sx={{
               mr: 2,
               display: { xs: 'none', md: 'flex' },
