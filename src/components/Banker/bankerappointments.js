@@ -14,19 +14,19 @@ const BankerAppointment = () => {
     ]
     // TODO
     // const [schedulerData, setSchedulerData] = useState([]);
-    // useEffect(()=>{
-    //     console.log('use effect ran');
-    //     // Backend Query insert here
+    useEffect(()=>{
+        console.log('use effect ran');
+        // Backend Query insert here
 
-    //     fetch('http://localhost:4000/api/banker')
-    //         .then(res => {
-    //             return res.json();
-    //         })
-    //         .then(data => {
-    //             console.log(data);
-    //             setData(data)
-    //         })
-    // }, [])
+        fetch('http://localhost:4000/api/clients')
+            .then(res => {
+                return res.json();
+            })
+            .then(data => {
+                console.log(data);
+                //setSchedulerData(data)
+            })
+    }, [])
 
     //fetch client data
 
