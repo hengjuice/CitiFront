@@ -45,7 +45,7 @@ const ClientAppBar = () => {
             variant="h6"
             noWrap
             component="a"
-            href="/"
+            href="/ClientHome"
             sx={{
               mr: 2,
               display: { xs: 'none', md: 'flex' },

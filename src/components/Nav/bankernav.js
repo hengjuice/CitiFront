@@ -45,7 +45,7 @@ const BankerAppBar = () => {
             variant="h6"
             noWrap
             component="a"
-            href="/"
+            href="/BankerHome"
             sx={{
               mr: 2,
               display: { xs: 'none', md: 'flex' },
