@@ -9,6 +9,7 @@ import SignIn from './components/Home/Login';
 import BankerHome from './components/Banker/bankerhome';
 import ClientHome from './components/Client/clienthome';
 import ClientAppointment from './components/Client/clientappointments';
+import BankerAppointment from './components/Banker/bankerappointments';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/Login" element={<SignIn />} />
+        <Route path="/Manage%20Appointments" element={<BankerAppointment />} />
         <Route path="/Book%20Appointments" element={<ClientAppointment />} />
         <Route path="/BankerHome" element={<BankerHome />} />
         <Route path="/ClientHome" element={<ClientHome />} />
