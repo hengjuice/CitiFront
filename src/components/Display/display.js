@@ -7,26 +7,21 @@ import {Button, Paper} from '@mui/material';
 const Display = (props) => {
   const clientInfo = props.clientInfo
   //fetch client info 
-  const [isLoading, setIsLoading] = useState(null)
-  useEffect( () => {
-    setTimeout(()=> {setIsLoading(true)
-      // fetch('').then(res=> {
-      //   return res.json()
-      // })
-      // .then(data => {
-      //   setIsLoading(false)
-      // })
-    }, 1000)
-  }, [clientInfo])
-
-  const data = [
-    { name: 'Group A', value: 400 },
-    { name: 'Group B', value: 300 },
-    { name: 'Group C', value: 300 },
+  const allClients = [{name: "Loh Yi Ze", sex: "Male", BankId: "8748", since: "08/11/2022", assetBreakdown:[
+    { name: 'Stocks', value: 50 },
+    { name: 'Bonds', value: 30 },
+    { name: 'Crypto', value: 20 },
     { name: 'Group D', value: 200 },
-    { name: 'Group E', value: 278 },
-    { name: 'Group F', value: 189 },
-  ]
+  ]}
+  , 
+  {name: "Heng Jiu Xiao", sex: "Male", BankId: "9912", since: "25/12/2019", assetBreakdown:[
+    { name: 'Stocks', value: 10 },
+    { name: 'Bonds', value: 30 },
+    { name: 'Crypto', value: 20 },
+  ]}]
+  const curClient = allClients.find((client => client.name == clientInfo))
+
+  const [isLoading, setIsLoading] = useState(null)
 
   return (
     
@@ -36,15 +31,15 @@ const Display = (props) => {
         <Avatar>
           <PersonIcon />
         </Avatar>
-        <h2>{clientInfo.title}</h2>
-        <h3> Sex: </h3>
-        <h3> Asset Allocation </h3>
+        <h2>{curClient.name}</h2>
+        <h3> Sex: {curClient.sex}</h3>
+        <h3> Asset Allocation: </h3>
         <PieChart width={400} height={300}>
           <Pie
             dataKey="value"
             startAngle={0}
             endAngle={360}
-            data={data}
+            data={curClient.assetBreakdown}
             cx="50%"
             cy="50%"
             outerRadius={80}
