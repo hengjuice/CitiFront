@@ -6,7 +6,7 @@ import CalendarGrid from './components/Calendar/calendar';
 import Grid from '@mui/material/Grid'; // Grid version 1
 import ResponsiveAppBar from './components/Nav/nav';
 import Home from './components/Home/Home';
-
+import SignIn from './components/Home/Login';
 
 function App() {
   return (
@@ -14,6 +14,7 @@ function App() {
       <ResponsiveAppBar />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/Login" element={<SignIn />} />
         <Route path="/Appointments" element={<CalendarGrid />} />
       </Routes>
     </div>
