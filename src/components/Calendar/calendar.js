@@ -13,7 +13,6 @@ const CalenderGrid = (props) => {
 
     return (
         <div className="calendar">
-            {props.user == 'Client'? <h1>Banker Page</h1>:<h1>Client Page</h1>}
             <Scheduler>
                 <ViewState />
                 <EditingState onCommitChanges={saveAppointment}/>
