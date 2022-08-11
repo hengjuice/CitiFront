@@ -7,16 +7,21 @@ import { useState } from 'react';
 const CalenderGrid = (props) => {
 
     const [isLoading, setLoading] = useState(false);
-
+    const saveAppointment= (data) =>{
+        console.log(data)
+    }
 
     return (
         <div className="calendar">
             {props.user == 'Client'? <h1>Banker Page</h1>:<h1>Client Page</h1>}
             <Scheduler>
                 <ViewState />
-                <EditingState />
+                <EditingState onCommitChanges={saveAppointment}/>
                 <IntegratedEditing />
-                <WeekView />
+                <WeekView
+                    startDayHour={9}
+                    endDayHour={17}
+                />
                 <Appointments />
                 <AppointmentForm />
             </Scheduler>
